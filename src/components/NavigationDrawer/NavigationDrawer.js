@@ -26,8 +26,18 @@ const NavigationDrawer = ({ isMenuOpen, onCloseMenu, history }) => (
                     history.push("/");
                 }}
             >
-                <i className="material-icons material-icons-round">note</i>{" "}
+                <i className="material-icons material-icons-round">note</i>
                 Notas
+            </button>
+            <button
+                className="navigation-drawer__menu__item"
+                onClick={() => {
+                    onCloseMenu();
+                    history.push("/settings");
+                }}
+            >
+                <i className="material-icons material-icons-round">settings</i>
+                Configurações
             </button>
             <button
                 className="navigation-drawer__menu__item"
@@ -36,7 +46,7 @@ const NavigationDrawer = ({ isMenuOpen, onCloseMenu, history }) => (
                     history.push("/about");
                 }}
             >
-                <i className="material-icons material-icons-round">info</i>{" "}
+                <i className="material-icons material-icons-round">info</i>
                 Sobre
             </button>
         </div>
