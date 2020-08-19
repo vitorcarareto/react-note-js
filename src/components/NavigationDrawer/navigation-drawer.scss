@@ -43,6 +43,7 @@
             width: 100%;
             background-color: transparent;
             border: none;
+            border-radius: $border-radius;
             display: flex;
             align-items: center;
             padding: $general-padding;
@@ -56,6 +57,11 @@
             }
             &:focus {
                 outline: none;
+            }
+
+            &--active {
+                color: $color-primary;
+                border: 2px solid $color-primary;
             }
         }
     }

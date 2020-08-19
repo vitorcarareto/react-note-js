@@ -12,6 +12,7 @@ const PageLayout = ({
     onOpenMenu,
     isMenuOpen,
     onCloseMenu,
+    menu,
 }) => {
     return (
         <div>
@@ -23,6 +24,7 @@ const PageLayout = ({
             />
             <div className="container">{children}</div>
             <NavigationDrawer
+                menu={menu}
                 isMenuOpen={isMenuOpen}
                 onCloseMenu={onCloseMenu}
             />

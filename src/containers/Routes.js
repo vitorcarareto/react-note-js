@@ -5,6 +5,12 @@ import About from "./About/About";
 import Notes from "./Notes/Notes";
 import PageNotFound from "./PageNotFound/PageNotFound";
 
+export const menu = [
+    { icon: "sticky_note_2", label: "Notas", path: "/" },
+    { icon: "settings", label: "Configurações", path: "/settings" },
+    { icon: "info", label: "Sobre", path: "/about" },
+];
+
 const Routes = ({
     notes,
     reloadHasError,
