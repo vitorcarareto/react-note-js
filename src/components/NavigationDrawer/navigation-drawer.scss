@@ -1,0 +1,62 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin";
+
+.navigation-drawer {
+    position: fixed;
+    top: 0;
+    left: -300;
+    // display: none;
+    height: 100vh;
+    width: 260px;
+    background-color: #fff;
+    @include box-shadow(5);
+    transition: 0.25s ease-in-out;
+
+    &--open {
+        // display: block;
+        left: 0;
+    }
+
+    &__head {
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: $general-padding;
+
+        &__button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__menu {
+        margin-top: 16px;
+        padding: 0 $general-padding;
+
+        &__item {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            padding: $general-padding;
+            cursor: pointer;
+
+            i {
+                margin-right: $general-padding;
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.08);
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

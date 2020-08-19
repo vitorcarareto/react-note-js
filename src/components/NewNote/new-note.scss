@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin";
+
+.new-note {
+    background-color: #fff;
+    padding: 10px 12px;
+    border-radius: $border-radius;
+    @include box-shadow(1);
+
+    &__input {
+        width: 100%;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

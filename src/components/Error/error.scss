@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin";
+
+.error {
+    text-align: center;
+
+    &__button {
+        background-color: $color-primary;
+        border: none;
+        border-radius: $border-radius;
+        padding: $general-padding;
+        cursor: pointer;
+        color: $color-text-primary;
+    }
+}

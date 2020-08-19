@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin";
+
+.app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: $color-primary;
+    color: $color-text-primary;
+    @include box-shadow(2);
+
+    &__container {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px $app-padding;
+        max-width: $container-max-width;
+    }
+
+    &__brand {
+        flex: 1;
+        padding-left: $general-padding;
+    }
+
+    &__action {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: $color-text-primary;
+        border-radius: $border-radius;
+
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        &--rotation {
+            &:hover {
+                background-color: rgba(0, 0, 0, 0);
+            }
+            @include rotation();
+        }
+
+        &--danger {
+            color: $color-danger;
+        }
+    }
+}
