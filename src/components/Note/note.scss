@@ -12,6 +12,9 @@
 
     &__text {
         flex: 1;
+        display: block;
+        word-wrap: break-word;
+        width: 0%;
     }
 
     &__input {
