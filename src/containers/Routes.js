@@ -1,11 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import About from "./About/About";
-import Notes from "./Notes/Notes";
+import AboutPage from "./About/AboutPage";
+import NotesPage from "./Notes/NotesPage";
+import SettingsPage from "./Settings/SettingsPage";
 import PageNotFound from "./PageNotFound/PageNotFound";
 
 export const menu = [
+    { icon: "notes", label: "Listas de Notas", path: "/list" },
     { icon: "sticky_note_2", label: "Notas", path: "/" },
     { icon: "settings", label: "Configurações", path: "/settings" },
     { icon: "info", label: "Sobre", path: "/about" },
@@ -25,7 +27,7 @@ const Routes = ({
             path="/"
             exact
             render={(props) => (
-                <Notes
+                <NotesPage
                     notes={notes}
                     reloadHasError={reloadHasError}
                     onRetry={onRetry}
@@ -37,7 +39,8 @@ const Routes = ({
                 />
             )}
         />
-        <Route path="/about" exact component={About} />
+        <Route path="/about" exact component={AboutPage} />
+        <Route path="/settings" exact component={SettingsPage} />
         <Route component={PageNotFound} />
     </Switch>
 );

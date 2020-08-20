@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { withRouter } from "react-router-dom";
+import { v1 as uuidv1 } from "uuid";
 
 import MenuItem from "./MenuItem";
 
@@ -29,6 +30,7 @@ const NavigationDrawer = ({
         <div className="navigation-drawer__menu">
             {menu.map((item) => (
                 <MenuItem
+                    key={uuidv1()}
                     isActive={location.pathname === item.path}
                     onClick={() => {
                         onCloseMenu();
