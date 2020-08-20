@@ -7,7 +7,7 @@ import "./settings.scss";
 
 const themes = [
     { key: "light", label: "Light" },
-    { key: "dark", label: "Dark", colorPrimary: "#795548" },
+    { key: "dark", label: "Dark", colorPrimary: "#282a36" },
 ];
 
 const SettingsPage = ({ toggleTheme }) => (
