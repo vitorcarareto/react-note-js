@@ -7,7 +7,17 @@ import "./settings.scss";
 
 const themes = [
     { key: "light", label: "Light" },
-    { key: "dark", label: "Dark", colorPrimary: "#282a36" },
+    { key: "dark", label: "Dark", navBar: { backgroundColor: "#282a36" } },
+    {
+        key: "classic",
+        label: "Classic",
+        navBar: { backgroundColor: "#795548" },
+    },
+    {
+        key: "white",
+        label: "White",
+        navBar: { backgroundColor: "#fff", color: "#000" },
+    },
 ];
 
 const SettingsPage = ({ theme: selectedTheme, toggleTheme }) => (
@@ -18,7 +28,7 @@ const SettingsPage = ({ theme: selectedTheme, toggleTheme }) => (
                 <button
                     key={theme.key}
                     className="themes__item"
-                    style={{ backgroundColor: theme.colorPrimary }}
+                    style={theme.navBar}
                     onClick={() => {
                         toggleTheme(theme);
                     }}
