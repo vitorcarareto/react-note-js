@@ -29,6 +29,9 @@
         background-color: transparent;
         border: 0;
         cursor: pointer;
+        &:focus {
+            outline: none;
+        }
 
         &--hidden {
             visibility: hidden;

@@ -23,7 +23,8 @@ class NotesProvider extends Component {
     handleAddNote = (text) => {
         console.log("handleAddNote");
         this.setState((prevState) => {
-            const notes = prevState.notes.concat({ id: uuidv1(), text });
+            // const notes = prevState.notes.concat({ id: uuidv1(), text }); // Append
+            const notes = [{ id: uuidv1(), text }].concat(prevState.notes); // Prepend
 
             this.handleSave(notes);
 
