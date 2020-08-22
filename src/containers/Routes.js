@@ -16,8 +16,8 @@ export const menu = [
 const Routes = () => (
     <Switch>
         <Route path="/" exact component={NotesPage} />
-        <Route path="/about" exact component={AboutPage} />
-        <Route path="/settings" exact component={SettingsPage} />
+        <Route path="/settings" component={SettingsPage} />
+        <Route path="/about" component={AboutPage} />
         <Route component={PageNotFound} />
     </Switch>
 );

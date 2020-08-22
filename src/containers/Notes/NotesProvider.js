@@ -86,7 +86,7 @@ class NotesProvider extends Component {
         this.setState({ isLoading: true, reloadHasError: false });
         NoteService.load()
             .then((notes) => {
-                this.setState({ notes: notes, isLoading: false });
+                this.setState({ notes, isLoading: false });
             })
             .catch(() => {
                 this.setState({ isLoading: false, reloadHasError: true });
@@ -110,11 +110,9 @@ class NotesProvider extends Component {
             <NotesContext.Provider
                 value={{
                     ...this.state,
-
                     onSaveRetry: () => {
                         this.handleSave(this.state.notes);
                     },
-
                     onRetry: this.handleReload,
                     onAddNote: this.handleAddNote,
                     onMove: this.handleMove,

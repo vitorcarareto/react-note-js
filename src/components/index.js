@@ -7,8 +7,8 @@ import NoteList from "./NoteList/NoteList";
 import PageLayout from "./PageLayout/PageLayout";
 import Header from "./Header/Header";
 import Button from "./Button/Button";
-import ButtonLink from "./Button/ButtonLink";
 import Center from "./Center/Center";
+import ButtonLink from "./Button/ButtonLink";
 
 export {
     Error,
