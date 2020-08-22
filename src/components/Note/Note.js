@@ -72,9 +72,7 @@ class Note extends React.Component {
                 <button
                     disabled={isEditing}
                     className="note__button"
-                    onClick={() => {
-                        this.handleEdit(note.id);
-                    }}
+                    onClick={this.handleEdit}
                 >
                     <i className="material-icons material-icons-round">edit</i>
                 </button>

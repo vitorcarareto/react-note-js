@@ -1,10 +1,10 @@
-import React, { createContext } from "react";
+import React from "react";
 
 import NotesContext from "./NotesContext";
 
 const withNotes = (Component) => (props) => (
     <NotesContext.Consumer>
-        {(createContext) => <Component {...props} {...context} />}
+        {(context) => <Component {...props} {...context} />}
     </NotesContext.Consumer>
 );
 

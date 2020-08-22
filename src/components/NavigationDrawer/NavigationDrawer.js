@@ -38,7 +38,7 @@ const NavigationDrawer = ({
                     }}
                     icon={item.icon}
                     label={item.label}
-                ></MenuItem>
+        />
             ))}
         </div>
     </div>

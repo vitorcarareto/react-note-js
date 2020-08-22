@@ -1,7 +1,7 @@
 import React from "react";
-import withNotes from "../../containers/Notes/withNotes";
 
 import { AppBar, NavigationDrawer } from "../";
+import withNotes from "../../containers/Notes/withNotes";
 
 import "./page-layout.scss";
 
