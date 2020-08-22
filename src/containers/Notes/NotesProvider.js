@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { v1 as uuidv1 } from "uuid";
+
+import NotesContext from "./NotesContext";
+import NoteService from "../../services/NoteService";
 
 class NotesProvider extends Component {
     state = {
@@ -102,6 +106,23 @@ class NotesProvider extends Component {
 
     render() {
         return (
+            <NotesContext.Provider
+                value={{
+                    ...this.state,
+
+                    onSaveRetry: () => {
+                        this.handleSave(this.state.notes);
+                    },
+
+                    onRetry: this.handleReload,
+                    onAddNote: this.handleAddNote,
+                    onMove: this.handleMove,
+                    onDelete: this.handleDelete,
+                    onEdit: this.handleEdit,
+                }}
+            >
+                {this.props.children}
+            </NotesContext.Provider>
         );
     }
 }
