@@ -1,4 +1,5 @@
 import React from "react";
+import withNotes from "../../containers/Notes/withNotes";
 
 import { AppBar, NavigationDrawer } from "../";
 
@@ -32,4 +33,4 @@ const PageLayout = ({
     );
 };
 
-export default PageLayout;
+export default withNotes(PageLayout);
