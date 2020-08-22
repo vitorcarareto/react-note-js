@@ -22,7 +22,7 @@ const themes = [
 
 const SettingsPage = ({ theme: selectedTheme, toggleTheme }) => (
     <div>
-        <Header centered>Temas</Header>
+        <Header>Temas</Header>
         <div className="themes">
             {themes.map((theme) => (
                 <button
