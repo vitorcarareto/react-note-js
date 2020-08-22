@@ -9,11 +9,7 @@ import SettingsProvider from "../Settings/SettingsProvider";
 
 class App extends React.Component {
     state = {
-        notes: [],
-        isLoading: false,
         isMenuOpen: false,
-        reloadHasError: false,
-        saveHasError: false,
     };
 
     componentDidCatch() {
