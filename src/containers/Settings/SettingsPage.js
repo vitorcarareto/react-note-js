@@ -20,7 +20,7 @@ const themes = [
     },
 ];
 
-const SettingsPage = ({ theme: selectedTheme, toggleTheme }) => (
+const SettingsPage = ({ selectedTheme: selectedTheme, toggleTheme }) => (
     <div>
         <Header>Temas</Header>
         <div className="themes">
@@ -35,7 +35,7 @@ const SettingsPage = ({ theme: selectedTheme, toggleTheme }) => (
                 >
                     <p>
                         {theme.label}
-                        {theme.key === selectedTheme.key && (
+                        {theme.key === theme.key && (
                             <i className="material-icons material-icons-round">
                                 check
                             </i>
