@@ -5,7 +5,7 @@ import SettingsContext from "./SettingsContext";
 class SettingsProvider extends React.Component {
     state = { theme: {} };
 
-    handleToggleTheme = theme => {
+    handleToggleTheme = (theme) => {
         this.setState({ theme });
     };
 
